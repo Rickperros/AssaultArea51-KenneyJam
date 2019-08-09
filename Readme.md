@@ -1,4 +1,4 @@
-#Assault Area 51 - Kenney Jam
+# Assault Area 51 - Kenney Jam
 Below are all the agreements on how to develop on this repository, so please make sure that your work checks the following rules behore merging it to the master branch.
 
 ## **Repository Rules**
