@@ -15,21 +15,23 @@ public class UICanister : MonoBehaviour
     [SerializeField] private Color CanisterEmpty;
 
     //Change
-    [SerializeField] private SpriteRenderer AnchorSprite;
+    private Transform anchorTransform;
 
-    private Vector3 AnchorPosition;
+    private Vector3 anchorPosition;
     private Vector3 desiredX;
     private bool isUsingCanister;
-    
 
     public float smoothTime = 0.3F;
     private Vector3 velocity = Vector3.zero;
 
 
+    private void Start()
+    {
+        anchorTransform = GameManager.Instance()._player;
+    }
+
     private void Update()
     {
-        if (AnchorSprite == null)
-            return;
 
         if (Input.GetAxisRaw("Horizontal") > 0)
             desiredX = Vector3.left;
@@ -39,9 +41,8 @@ public class UICanister : MonoBehaviour
         if (isUsingCanister)
             desiredX = Vector3.left;
 
-
-        AnchorPosition = AnchorSprite.transform.position + desiredX;
-        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition), ref velocity, smoothTime);
+        anchorPosition = anchorTransform.position + desiredX;
+        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(anchorPosition), ref velocity, smoothTime);
     }
 
     public void Refill ()
