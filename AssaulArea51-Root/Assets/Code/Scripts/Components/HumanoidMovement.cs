@@ -14,9 +14,10 @@ public class HumanoidMovement : MonoBehaviour
     [SerializeField] private float _minStepMovement = 0.01f;
     [SerializeField] [Range(0f,1f)] private float _airControlRatio = 0.5f;
     [SerializeField] private float _fallingTime = 0.15f;
+    [SerializeField] private float _gravity = -20f;
 
     [Header("Sensing")]
-    [SerializeField] private Collider2D _footCollider;
+    [SerializeField] private BoxCollider2D _footCollider;
 
 
     private float _horizontalDirection = 0f;
@@ -27,15 +28,15 @@ public class HumanoidMovement : MonoBehaviour
     private bool _descending = false;
     private bool _ableToJump = false;
 
-    private Rigidbody2D _rigidbody;
+    private Transform _transform;
 
     void Awake()
     {
-        if(_rigidbody == null)
-            _rigidbody = GetComponent<Rigidbody2D>();
+        if(_transform == null)
+            _transform = transform;
 
         if (_footCollider == null)
-            _footCollider = GetComponentInChildren<Collider2D>();
+            _footCollider = GetComponentInChildren<BoxCollider2D>();
     }
 
     void Update()
@@ -49,6 +50,7 @@ public class HumanoidMovement : MonoBehaviour
             _footCollider.enabled = false;
             _descending = true;
             _ableToJump = false;
+            _currentYAcceleration = 0f;
             Invoke("ActivateFoot", _fallingTime);
         }
 
@@ -69,7 +71,7 @@ public class HumanoidMovement : MonoBehaviour
         l_movementX = Move();
         l_movementX *= _ableToJump ? 1f : _airControlRatio;
 
-        _rigidbody.MovePosition(_rigidbody.position + l_movementY + l_movementX);
+        _transform.position += Vector3.up * l_movementY.y + Vector3.right * l_movementX.x;
 
     }
 
@@ -93,20 +95,27 @@ public class HumanoidMovement : MonoBehaviour
 
     private Vector2 Fall()
     {
-        _currentYAcceleration = Mathf.Clamp(_currentYAcceleration + Physics2D.gravity.y*Time.fixedDeltaTime, Physics2D.gravity.y,_jumpForceY);
+        _currentYAcceleration = Mathf.Clamp(_currentYAcceleration + _gravity *Time.fixedDeltaTime, _gravity, _jumpForceY);
         return Vector2.up * ((0.5f * _currentYAcceleration) * Time.fixedDeltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Car" && _footCollider.enabled == true)
+        {
             _ableToJump = true;
+            gameObject.transform.parent = collision.collider.transform;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         if(_footCollider.enabled == true)
             _ableToJump = false;
+        if (transform.parent != null)
+        {
+            transform.parent = null;
+        }
     }
 
     public void ActivateFoot()
