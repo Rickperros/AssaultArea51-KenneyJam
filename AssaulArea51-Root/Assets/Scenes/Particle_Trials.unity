@@ -5249,7 +5249,7 @@ GameObject:
   - component: {fileID: 963054058}
   - component: {fileID: 963054057}
   m_Layer: 0
-  m_Name: Character0_Idle
+  m_Name: Character_Idle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
