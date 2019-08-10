@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: dd1b9aebef7e7124b932a0c80caea96e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5681541806102479003
+    second: spritesheet_complete_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -82,7 +85,28 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_complete_0
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 165
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7b3f1f6284c6c42b21d1a10554ab71
+      internalID: -5681541806102479003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
