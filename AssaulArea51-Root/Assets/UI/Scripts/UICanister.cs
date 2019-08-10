@@ -15,7 +15,7 @@ public class UICanister : MonoBehaviour
     [SerializeField] private Color CanisterEmpty;
 
     //Change
-    private Transform anchorTransform;
+    public SpriteRenderer AnchorSprite;
 
     private Vector3 anchorPosition;
     private Vector3 desiredX;

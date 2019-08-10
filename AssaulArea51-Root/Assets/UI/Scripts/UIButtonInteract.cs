@@ -19,7 +19,7 @@ public class UIButtonInteract : MonoBehaviour
     [SerializeField] private Text TxtOutput;
     [SerializeField] private Text TxtInstruction;
     [SerializeField] private Image ImgHoldProgress;
-    [SerializeField] private SpriteRenderer AnchorSprite;
+    public SpriteRenderer AnchorSprite;
 
 
     private Vector3 AnchorPosition;

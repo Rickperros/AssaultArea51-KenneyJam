@@ -5,8 +5,8 @@ public class HoldableHotspot : Hotspot
     [SerializeField] protected float _maxInteractionRequiredTime = 5f;
     [Range(0f, 1f)] public float _requiredTimeRatio = 1f;
 
-    private float _currentRequiredInputTime = 0f;
-    private float _currentInteractionTime = 0f;
+    protected float _currentRequiredInputTime = 0f;
+    protected float _currentInteractionTime = 0f;
 
     /// <summary>
     /// Set Base call always at the end of overrided method
