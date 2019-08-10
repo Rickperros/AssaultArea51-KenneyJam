@@ -6,6 +6,9 @@ public class CarOscillation : MonoBehaviour
     [SerializeField] private Transform _frontGoal;
     [SerializeField] private Transform _backGoal;
     [SerializeField] private float _maxSpeed;
+    [SerializeField] private Vector2 _minRandomValues;
+    [SerializeField] private Vector2 _maxRandomValues;
+
 
     [Header("Sensing")]
     [SerializeField] private float _farAwayRadius;
@@ -36,7 +39,7 @@ public class CarOscillation : MonoBehaviour
         else
             _currentGoal = _frontGoal;
 
-        float l_time = Random.Range(3f, 5f) - Random.Range(1f, 2f);
+        float l_time = Random.Range(_maxRandomValues.x, _maxRandomValues.y) - Random.Range(_minRandomValues.x, _minRandomValues.y);
         Invoke("SwitchGoals", l_time);
     }
 
