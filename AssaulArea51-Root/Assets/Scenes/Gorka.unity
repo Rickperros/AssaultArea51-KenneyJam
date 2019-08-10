@@ -13171,6 +13171,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 35be95ef481f8194ca8cce49375f3a8b, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 35be95ef481f8194ca8cce49375f3a8b, type: 2}
+  - {fileID: 7400000, guid: 44ca883f93d125345916b740cac8e592, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -13192,6 +13193,7 @@ MonoBehaviour:
   MoveSpeed: 10
   AbducingSpeed: 1
   TimeOnCar: 5
+  TimeExploding: 1
 --- !u!4 &1730177569
 Transform:
   m_ObjectHideFlags: 0
@@ -13241,7 +13243,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0020900369, y: 0.28634602}
+  m_Offset: {x: -0.0020900369, y: 0.18892102}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5026706, y: 0.24763046}
@@ -13252,7 +13254,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2481896, y: 0.35706055}
+  m_Size: {x: 0.7455702, y: 0.19417116}
   m_EdgeRadius: 0
 --- !u!1 &1738809632
 GameObject:
