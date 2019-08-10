@@ -18,7 +18,7 @@ public class UIFuelMessage : MonoBehaviour
         if (AnchorSprite == null)
             return;
 
-        AnchorPosition = AnchorSprite.transform.position + Vector3.down * AnchorSprite.bounds.max.y;
+        AnchorPosition = AnchorSprite.transform.position + Vector3.down *2 * AnchorSprite.bounds.max.y;
         transform.position = Camera.main.WorldToScreenPoint(AnchorPosition);
 
     }
@@ -31,7 +31,7 @@ public class UIFuelMessage : MonoBehaviour
 
     public void OutOfFuel()
     {
-        Message = "Out of FUel";
+        Message = "Out of Fuel";
         TxtMessage.text = Message;
     }
 }
