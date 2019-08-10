@@ -80,6 +80,7 @@ public class Alien : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position,spawnPosition, MoveSpeed * Time.deltaTime);
                 break;
             case STATES.DYING:
+                transform.position += Vector3.up * 10 * Time.deltaTime;
                 break;
             case STATES.ABDUCING:
                 Car.transform.position = Vector3.MoveTowards(Car.transform.position, transform.position, AbducingSpeed * Time.deltaTime);
