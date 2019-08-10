@@ -19,30 +19,7 @@ public class UIButtonInteract : MonoBehaviour
     [SerializeField] private Text TxtOutput;
     [SerializeField] private Text TxtInstruction;
     [SerializeField] private Image ImgHoldProgress;
-    [SerializeField] private SpriteRenderer AnchorSprite;
 
-
-    private Vector3 AnchorPosition;
-
-    private float timer;
-    private bool onHolding;
-
-    private void Update()
-    {
-        if (AnchorSprite == null)
-            return;
-
-        AnchorPosition = AnchorSprite.transform.position + Vector3.down * AnchorSprite.bounds.max.y;
-        transform.position = Camera.main.WorldToScreenPoint(AnchorPosition);
-
-        if (!onHolding)
-
-        timer += Time.deltaTime / 2;
-        if (timer > 1)
-            timer = 0;
-
-        Progress(timer);
-    }
 
     /// <summary>
     /// Enter the HOTSPOT
@@ -51,7 +28,6 @@ public class UIButtonInteract : MonoBehaviour
     {
         HolderButton.SetActive(true);
         TxtInstruction.gameObject.SetActive(true);
-        ImgHoldProgress.gameObject.SetActive(false);
         Setup();
     }
 
@@ -72,19 +48,6 @@ public class UIButtonInteract : MonoBehaviour
     {
         TxtOutput.gameObject.SetActive(true);
         TxtInstruction.gameObject.SetActive(false);
-        ImgHoldProgress.gameObject.SetActive(true);
-        onHolding = true;
-    }
-
-    /// <summary>
-    /// Release Input Key
-    /// </summary>
-    public void Release ()
-    {
-        ImgHoldProgress.gameObject.SetActive(false);
-        TxtInstruction.gameObject.SetActive(true);
-        TxtOutput.gameObject.SetActive(false);
-        onHolding = false;
     }
 
     private void Setup()
