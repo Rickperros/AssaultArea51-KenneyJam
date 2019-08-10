@@ -15,7 +15,7 @@ public class UICanister : MonoBehaviour
     [SerializeField] private Color CanisterEmpty;
 
     //Change
-    private Transform anchorTransform;
+    public SpriteRenderer AnchorSprite;
 
     private Vector3 anchorPosition;
     private Vector3 desiredX;
@@ -27,7 +27,7 @@ public class UICanister : MonoBehaviour
 
     private void Start()
     {
-        anchorTransform = GameManager.Instance()._player;
+        AnchorSprite = GameManager.Instance()._player.GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
@@ -41,7 +41,7 @@ public class UICanister : MonoBehaviour
         if (isUsingCanister)
             desiredX = Vector3.left;
 
-        anchorPosition = anchorTransform.position + desiredX;
+        anchorPosition = AnchorSprite.transform.position + desiredX;
         transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(anchorPosition), ref velocity, smoothTime);
     }
 

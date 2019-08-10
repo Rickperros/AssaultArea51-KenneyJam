@@ -1,7 +1,106 @@
 fileFormatVersion: 2
-guid: 184270912a7ced341abb199433c1c414
+guid: 01ad817820822a745b2c986ddf52e785
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7490761806808876628
+    second: BG_Elements_Clouds_0
+  - first:
+      213: -2915557745941786160
+    second: BG_Elements_Pyramids_0
+  - first:
+      213: 6008043021392000649
+    second: BG_Elements_Dunes_0
+  - first:
+      213: -3173885641676811995
+    second: BG_Elements_Dunes_2
+  - first:
+      213: -7606483061874850211
+    second: BG_Elements_Clouds_1
+  - first:
+      213: -1586469832338915834
+    second: BG_Elements_Cloud_0
+  - first:
+      213: -4818265526070984335
+    second: BG_Elements_Cloud_1
+  - first:
+      213: 2122717354067068189
+    second: BG_Elements_Cactus_0
+  - first:
+      213: -2527902730210139613
+    second: BG_Elements_Cactus_1
+  - first:
+      213: -643094016854559172
+    second: BG_Elements_CloudMix_3
+  - first:
+      213: -8414122867286378189
+    second: BG_Elements_Pyramid_0
+  - first:
+      213: 8350718121263589429
+    second: BG_Elements_Cloud_3
+  - first:
+      213: -5064215728738009029
+    second: BG_Elements_Cloud_2
+  - first:
+      213: 413046828081424185
+    second: BG_Elements_Cactus_2
+  - first:
+      213: 5555711236368302301
+    second: BG_Elements_Cactus_3
+  - first:
+      213: 635079047649252965
+    second: BG_Elements_Cactus_4
+  - first:
+      213: 1439454324044360391
+    second: BG_Elements_CloudMix_0
+  - first:
+      213: 9069338285843984767
+    second: BG_Elements_Cloud_4
+  - first:
+      213: 1929079071532355160
+    second: BG_Elements_Cloud_5
+  - first:
+      213: -8173266342104125982
+    second: BG_Elements_Cloud_6
+  - first:
+      213: -4478438128050632842
+    second: BG_Elements_Cloud_7
+  - first:
+      213: 7768479361573920508
+    second: BG_Elements_CloudMix_1
+  - first:
+      213: -260982227018252041
+    second: BG_Elements_CloudMix_2
+  - first:
+      213: -4450784032325860767
+    second: BG_Elements_CloudMix_4
+  - first:
+      213: -3922496214353365934
+    second: BG_Elements_CloudMix_8
+  - first:
+      213: 3461360176102746909
+    second: BG_Elements_CloudMix_6
+  - first:
+      213: -1984480610261093615
+    second: BG_Elements_CloudMix_7
+  - first:
+      213: 896763353568259591
+    second: BG_Elements_CloudMix_9
+  - first:
+      213: -1735901700146235922
+    second: BG_Elements_Sun_0
+  - first:
+      213: 7581920107209447228
+    second: BG_Elements_CloudMix_10
+  - first:
+      213: 3852360108256729744
+    second: BG_Elements_Pyramid_1
+  - first:
+      213: 149444247267440774
+    second: BG_Elements_Pyramid_2
+  - first:
+      213: 2959277129149171857
+    second: BG_Elements_Pyramid_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -36,11 +135,11 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,13 +168,717 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BG_Elements_Clouds_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1840
+        width: 1004
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0465f8d06b519514492f8dbcd3ce8360
+      internalID: -7490761806808876628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Pyramids_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1670
+        width: 1003
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66137bafcc72b44d9919cb9c7db6ee8
+      internalID: -2915557745941786160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Dunes_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1541
+        width: 1004
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69576ab74a38eb64e98dfa366ceb824d
+      internalID: 6008043021392000649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Dunes_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1412
+        width: 1004
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e21b59627c2f544f88bd0ebc62a8acc
+      internalID: -3173885641676811995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Clouds_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1164
+        width: 1002
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b639f77e3e5c0644b0b3fab739a437e
+      internalID: -7606483061874850211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cloud_0
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1044
+        width: 236
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9daadd90247fa5489333dbb4f761f95
+      internalID: -1586469832338915834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cloud_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 916
+        width: 231
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7b510cc02d71d40b040f0722be9816
+      internalID: -4818265526070984335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cactus_0
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1641
+        width: 73
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c50ecb91a5c89544934a79ef6107244
+      internalID: 2122717354067068189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cactus_1
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1655
+        width: 58
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373db3aceb0d423418cfdf1b502dd99b
+      internalID: -2527902730210139613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_3
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 1039
+        width: 177
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6a6efb4df71504ab1dd85fe70a4ddc
+      internalID: -643094016854559172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Pyramid_0
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 874
+        width: 215
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd11cc2614f4a44881a502cec648029
+      internalID: -8414122867286378189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cloud_3
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 733
+        width: 191
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b80cdb16ec71d47a37df210139041c
+      internalID: 8350718121263589429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cloud_2
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1288
+        width: 177
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afedcc05aa2b5342b34bee931a1775a
+      internalID: -5064215728738009029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cactus_2
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 1296
+        width: 75
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e306c08fd463f6a44ace6de39ed549ed
+      internalID: 413046828081424185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cactus_3
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 29
+        width: 72
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492d8568a905af2438d406e122a3b853
+      internalID: 5555711236368302301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cactus_4
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 30
+        width: 55
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5851cc47603e89347972ccfb826ded7a
+      internalID: 635079047649252965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_0
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 562
+        width: 190
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b458358d9976944a92fc0cf5ba868b
+      internalID: 1439454324044360391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cloud_4
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 322
+        width: 200
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677043f2664f2ff45a2d9764ed1ff0d4
+      internalID: 9069338285843984767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cloud_5
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 240
+        width: 211
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5d3ba8da137414fa9248e320ebe057
+      internalID: 1929079071532355160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cloud_6
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 40
+        width: 240
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ca3f217181fcb4c853aa03a9336690
+      internalID: -8173266342104125982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Cloud_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 295
+        width: 267
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0765012f967d69f409460648411c6baf
+      internalID: -4478438128050632842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_1
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 745
+        width: 240
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e0efd1e88404d49a65d6d1cbcd691a
+      internalID: 7768479361573920508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_2
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 753
+        width: 214
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452be4f8beeaea743ac44688a3f77d08
+      internalID: -260982227018252041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 624
+        width: 237
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb487e12168ebf747ae68527b84bf8ca
+      internalID: -4450784032325860767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 632
+        width: 215
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb959f0151fccc4b8bc03aa442eff2d
+      internalID: -3922496214353365934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 267
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80712de549d79a048bd9991a3787653c
+      internalID: 3461360176102746909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_7
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 111
+        width: 200
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223e22f0002880d40baf35e314a806aa
+      internalID: -1984480610261093615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_9
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 70
+        width: 211
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0104d9d7b2498204ab416e113f5cfa38
+      internalID: 896763353568259591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Sun_0
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 370
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de023b34ceb2c4b49a83102be3a07689
+      internalID: -1735901700146235922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_CloudMix_10
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 49
+        width: 229
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7faafea6e72d8448848ef909a529b6
+      internalID: 7581920107209447228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Pyramid_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 191
+        width: 219
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e6e3e5e3b97294281e538fcff9963f
+      internalID: 3852360108256729744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Pyramid_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 491
+        width: 228
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fea4481a9ee694c8c7ab8b7ba73965
+      internalID: 149444247267440774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Elements_Pyramid_3
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 360
+        width: 229
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e75377d5d87bb34e88f78db1f8270bb
+      internalID: 2959277129149171857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0f8206c246253994f88b6fb84bb9f097
+    spriteID: f658dc15668de9249b9d2aa029ed383d
     internalID: 0
     vertices: []
     indices: 
