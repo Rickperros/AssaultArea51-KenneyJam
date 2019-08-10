@@ -14,22 +14,23 @@ public class UICarFuel : MonoBehaviour
     [SerializeField] private Color CanisterEmpty;
 
     //Change
-    [SerializeField] private SpriteRenderer AnchorSprite;
-
+    private Transform anchorTransform;
     private Vector3 AnchorPosition;
-    private Vector3 desiredX;
 
     public float smoothTime = 0.3F;
     private Vector3 velocity = Vector3.zero;
 
+    private void Start()
+    {
+        anchorTransform = GameManager.Instance()._player;
+    }
 
     private void Update()
     {
-        if (AnchorSprite == null)
+        if (anchorTransform == null)
             return;
 
-        AnchorPosition = AnchorSprite.transform.position + desiredX;
-
+        AnchorPosition = anchorTransform.transform.position + Vector3.right;
         transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition), ref velocity, smoothTime);
     }
 

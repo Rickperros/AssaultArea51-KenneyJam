@@ -46,7 +46,7 @@ public class CarOscillation : MonoBehaviour
     private void ArriveTo()
     {
         float l_distanceToGoal = Vector3.Distance(_transform.position, _currentGoal.position);
-        Debug.Log(l_distanceToGoal);
+      //  Debug.Log(l_distanceToGoal);
         if (l_distanceToGoal < _closeEnoughRadius)
             return;
         else if (l_distanceToGoal >= _closeEnoughRadius && l_distanceToGoal <= _farAwayRadius)
