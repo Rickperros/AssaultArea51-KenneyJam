@@ -13,21 +13,21 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        if (_instance == null)
+            _instance = this;
+
         if (_instance != null && _instance != this)
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
 
-        if (_player.Equals(null))
+        if (_player == null ||_player.Equals(null))
             _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
 
     public static GameManager Instance()
     {
-        if (!_instance)
-            _instance = new GameManager();
-
         return _instance;
     }
 
