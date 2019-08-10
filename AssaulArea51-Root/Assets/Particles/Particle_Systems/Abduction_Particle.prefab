@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1298770097470472632}
   - component: {fileID: 4192005665391066037}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Abduction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905005712747909026}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 0.29, z: 1}
   m_Children: []
   m_Father: {fileID: 8006641143309874769}
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 8.25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -983,20 +983,20 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 1
-          inSlope: -0.22160427
-          outSlope: -0.22160427
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.42471042
+          outWeight: 0.14455782
         - serializedVersion: 3
           time: 1
-          value: 0.32940438
-          inSlope: -1.996415
-          outSlope: -1.996415
+          value: 0.44116154
+          inSlope: -0.8328421
+          outSlope: -0.8328421
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.11196911
+          inWeight: 0.09183675
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
