@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UICanister : MonoBehaviour
+public class UICarFuel : MonoBehaviour
 {
-
     [SerializeField] private Animation ArrowsUp;
     [SerializeField] private Animation ArrowsDown;
 
@@ -19,8 +18,6 @@ public class UICanister : MonoBehaviour
 
     private Vector3 AnchorPosition;
     private Vector3 desiredX;
-    private bool isUsingCanister;
-    
 
     public float smoothTime = 0.3F;
     private Vector3 velocity = Vector3.zero;
@@ -31,40 +28,22 @@ public class UICanister : MonoBehaviour
         if (AnchorSprite == null)
             return;
 
-        if (Input.GetAxisRaw("Horizontal") > 0)
-            desiredX = Vector3.left;
-        if (Input.GetAxisRaw("Horizontal") < 0)
-            desiredX = Vector3.right;
-
-        if (isUsingCanister)
-            desiredX = Vector3.left;
-
-
         AnchorPosition = AnchorSprite.transform.position + desiredX;
+
         transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition), ref velocity, smoothTime);
     }
 
-    public void Refill ()
+    public void Refill()
     {
-        isUsingCanister = true;
         ArrowsUp.gameObject.SetActive(true);
         ArrowsDown.gameObject.SetActive(false);
     }
 
-    public void Fill ()
+    public void Fill()
     {
-        isUsingCanister = true;
         ArrowsUp.gameObject.SetActive(false);
         ArrowsDown.gameObject.SetActive(true);
     }
-
-    public void Stop()
-    {
-        isUsingCanister = false;
-        ArrowsUp.gameObject.SetActive(false);
-        ArrowsDown.gameObject.SetActive(false);
-    }
-
 
     /// <summary>
     /// Changes the fillable bar of the action
