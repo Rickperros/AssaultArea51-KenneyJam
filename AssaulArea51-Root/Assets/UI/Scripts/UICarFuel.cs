@@ -30,7 +30,7 @@ public class UICarFuel : MonoBehaviour
         if (anchorTransform == null)
             return;
 
-        AnchorPosition = anchorTransform.transform.position + Vector3.right;
+        AnchorPosition = anchorTransform.transform.position;
         transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition), ref velocity, smoothTime);
     }
 

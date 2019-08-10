@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 6672739312789806183}
   - component: {fileID: 6672739312789806182}
   m_Layer: 5
-  m_Name: Car Fuel Mesage
+  m_Name: CarFuelMesage_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
   Message: 
   TxtMessage: {fileID: 6672739312636820497}
   AnchorSprite: {fileID: 0}
+  smoothTime: 0.1
 --- !u!1 &6672739314065481910
 GameObject:
   m_ObjectHideFlags: 0
