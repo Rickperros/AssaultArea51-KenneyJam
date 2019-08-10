@@ -36,11 +36,9 @@ public class FuelTankComponent : HoldableHotspot
             _movementController = GetComponent<CarOscillation>();
 
         _UIButtonInteract = GameObject.Instantiate(_InteractUI, _gameHUDCanvas.transform).GetComponent<UIButtonInteract>();
-        _UIButtonInteract.AnchorSprite = l_renderer;
         _UIButtonInteract.gameObject.SetActive(false);
 
         _UICanister = GameObject.Instantiate(_fuelTankUI, _gameHUDCanvas.transform).GetComponent<UICanister>();
-        _UICanister.AnchorSprite = l_renderer;
         _UICanister.gameObject.SetActive(false);
 
         _UIFuelMessage = GameObject.Instantiate(_lowFuelDisclaimer, _gameHUDCanvas.transform).GetComponent<UIFuelMessage>();
