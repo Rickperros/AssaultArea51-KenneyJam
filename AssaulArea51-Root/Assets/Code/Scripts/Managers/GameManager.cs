@@ -2,6 +2,7 @@
 
 public class GameManager : MonoBehaviour
 {
+    public Transform _player;
     [HideInInspector] public bool _isPaused { get; private set;}
     [HideInInspector] public bool _isPlaying { get; private set;}
     [HideInInspector] public bool _isGameOver { get; private set;}
@@ -9,13 +10,18 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     private EGameState _currentGameState = EGameState.GAME_OVER;  
 
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+
+        if (_player.Equals(null))
+            _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
+
 
     public static GameManager Instance()
     {
