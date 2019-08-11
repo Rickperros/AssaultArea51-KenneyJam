@@ -1085,6 +1085,7 @@ GameObject:
   - component: {fileID: 1439573326}
   - component: {fileID: 1439573322}
   - component: {fileID: 1439573327}
+  - component: {fileID: 1439573328}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1238,6 +1239,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01dd19b61ffb0c64aad4a1061f65551f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fuelTank: {fileID: 1439573328}
+--- !u!114 &1439573328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439573321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af108e8b7eb4244e928512bb2d7fadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxFuel: 40
+  _maxFuelIncrease: 4
+  _lowFuelThreshold: 0.33
+  _gameHUDCanvas: {fileID: 888848501}
+  _lowFuelDisclaimer: {fileID: 6672739312789806180, guid: 4313b74a4b868a247ad18d0807ef1616,
+    type: 3}
+  _PlayerCannister: {fileID: 8374874358973764267, guid: 28bcc65b43f491449be84588be3fe420,
+    type: 3}
+  _currentFuel: 0
 --- !u!1 &1659308349
 GameObject:
   m_ObjectHideFlags: 0
