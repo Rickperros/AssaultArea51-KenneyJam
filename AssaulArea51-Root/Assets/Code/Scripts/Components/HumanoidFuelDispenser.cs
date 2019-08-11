@@ -53,9 +53,9 @@ public class HumanoidFuelDispenser : MonoBehaviour
 
     public void Fill()
     {
-        _currentFuel = Mathf.Clamp(_currentFuel + _maxFuelIncrease * Time.deltaTime, 0f, _maxFuel);
-        _PlayerCannister.SetActive(true);
+        _UICanister.gameObject.SetActive(true);
         _UICanister.Progress(_currentFuel/_maxFuel);
+        _currentFuel = Mathf.Clamp(_currentFuel + _maxFuelIncrease * Time.deltaTime, 0f, _maxFuel);
         _reposting = true;
 
         if (_currentFuel >= _maxFuel)
