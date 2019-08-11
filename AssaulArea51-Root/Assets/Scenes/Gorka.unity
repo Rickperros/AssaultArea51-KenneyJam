@@ -5668,7 +5668,6 @@ MonoBehaviour:
   Message: 
   TxtMessage: {fileID: 2031475796}
   AnchorSprite: {fileID: 0}
-  smoothTime: 0.3
 --- !u!1 &1083708206
 GameObject:
   m_ObjectHideFlags: 0
@@ -7240,6 +7239,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
+  _levelProgressBar: {fileID: 0}
+  _gameHUD: {fileID: 0}
+  _minCarsToSucces: 3
+  _carsInLevel: 0
+  _levelDuration: 300
+  _currentGameState: 2
 --- !u!4 &1457404100
 Transform:
   m_ObjectHideFlags: 0
@@ -7675,7 +7680,7 @@ MonoBehaviour:
   TxtOutput: {fileID: 1857950868}
   TxtInstruction: {fileID: 1443017111}
   ImgHoldProgress: {fileID: 18781821}
-  AnchorSprite: {fileID: 0}
+  AnchorTransform: {fileID: 0}
 --- !u!1 &1554040016
 GameObject:
   m_ObjectHideFlags: 0
@@ -12710,6 +12715,7 @@ GameObject:
   - component: {fileID: 1604521203}
   - component: {fileID: 1604521202}
   - component: {fileID: 1604521201}
+  - component: {fileID: 1604521208}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -12795,6 +12801,8 @@ MonoBehaviour:
   _fallingTime: 0.5
   _gravity: -20
   _footCollider: {fileID: 1946532007}
+  _spriteRenderer: {fileID: 0}
+  _animator: {fileID: 0}
 --- !u!61 &1604521205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12886,6 +12894,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1604521208
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604521200}
+  m_Enabled: 1
 --- !u!1 &1620791882
 GameObject:
   m_ObjectHideFlags: 0
