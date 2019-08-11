@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         _UIProgressBar.gameObject.SetActive(true);
         _UIProgressBar.Progress(0);
 
-        ChangeGameState(EGameState.PLAYING);
+        //ChangeGameState(EGameState.PLAYING);
 
         _menu = FindObjectOfType<GameMenu>();
     }
