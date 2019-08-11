@@ -40,9 +40,9 @@ public class UICanister : MonoBehaviour
 
         if (isUsingCanister)
             desiredX = Vector3.left;
-
-        anchorPosition = AnchorSprite.transform.position + desiredX;
-        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(anchorPosition), ref velocity, smoothTime);
+            
+        anchorPosition = AnchorSprite.transform.position;
+        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(anchorPosition) + desiredX * 50, ref velocity, smoothTime);
     }
 
     public void Refill ()

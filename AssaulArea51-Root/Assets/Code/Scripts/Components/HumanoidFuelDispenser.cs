@@ -55,6 +55,7 @@ public class HumanoidFuelDispenser : MonoBehaviour
     {
         _UICanister.gameObject.SetActive(true);
         _UICanister.Progress(_currentFuel/_maxFuel);
+        _UICanister.Refill();
         _currentFuel = Mathf.Clamp(_currentFuel + _maxFuelIncrease * Time.deltaTime, 0f, _maxFuel);
         _reposting = true;
 
@@ -66,12 +67,14 @@ public class HumanoidFuelDispenser : MonoBehaviour
     {
         _currentFuel = Mathf.Clamp(_currentFuel -amount, 0f, _maxFuel);
         _UICanister.gameObject.SetActive(true);
+        _UICanister.Fill();
         _UICanister.Progress(_currentFuel / _maxFuel);
         _interacting = true;
     }
 
     public void HidePlayerTank()
     {
+        _UICanister.Stop();
         _UICanister.gameObject.SetActive(false);
     }
 }

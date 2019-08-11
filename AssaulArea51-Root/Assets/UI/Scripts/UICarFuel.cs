@@ -17,7 +17,7 @@ public class UICarFuel : MonoBehaviour
     private Transform anchorTransform;
     private Vector3 AnchorPosition;
 
-    public float smoothTime = 0.3F;
+    private float smoothTime = 0.05F;
     private Vector3 velocity = Vector3.zero;
 
     private void Start()
@@ -28,7 +28,7 @@ public class UICarFuel : MonoBehaviour
     private void Update()
     {
         AnchorPosition = anchorTransform.transform.position;
-        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition), ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition) + Vector3.right * 50, ref velocity, smoothTime);
     }
 
     public void Refill()
