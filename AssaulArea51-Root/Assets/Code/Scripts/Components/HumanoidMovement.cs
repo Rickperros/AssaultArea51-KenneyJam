@@ -27,6 +27,9 @@ public class HumanoidMovement : MonoBehaviour
     private bool _fall = false;
     private bool _descending = false;
     private bool _ableToJump = false;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Animator _animator;
+
 
     private Transform _transform;
 
@@ -37,10 +40,14 @@ public class HumanoidMovement : MonoBehaviour
 
         if (_footCollider == null)
             _footCollider = GetComponentInChildren<BoxCollider2D>();
+
     }
 
     void Update()
     {
+        if (Input.GetAxisRaw(_inputHorizontal) != 0)
+            _spriteRenderer.flipX = Input.GetAxisRaw(_inputHorizontal) < 0;
+
         _horizontalDirection = Input.GetAxisRaw(_inputHorizontal);
         _jump = Input.GetAxisRaw(_inputJump) > 0f && _ableToJump;
         _fall = Input.GetAxisRaw(_inputFall) < 0f;
@@ -80,6 +87,8 @@ public class HumanoidMovement : MonoBehaviour
         float l_acceleration = _horizontalDirection != 0 ? _acceleration * _horizontalDirection : Mathf.Sign(_currentSpeed) * -1 * _acceleration;
         _currentSpeed = Mathf.Clamp(_currentSpeed + l_acceleration, -1*_maxSpeed, _maxSpeed);
 
+        _animator.SetFloat("MoveSpeed", Mathf.Abs( _currentSpeed));
+
         if(_currentSpeed*Time.fixedDeltaTime > _minStepMovement || _currentSpeed * Time.fixedDeltaTime < -1 * _minStepMovement)
             return Vector2.right * _currentSpeed * Time.fixedDeltaTime;
 
@@ -88,6 +97,8 @@ public class HumanoidMovement : MonoBehaviour
 
     private void Jump()
     {
+        _animator.SetBool("Grounded", false);
+
         _currentYAcceleration = _jumpForceY;
         _footCollider.enabled = false;
         _ableToJump = false;
@@ -105,6 +116,8 @@ public class HumanoidMovement : MonoBehaviour
         {
             _ableToJump = true;
             gameObject.transform.parent = collision.collider.transform;
+
+            _animator.SetBool("Grounded", true);
         }
     }
 
