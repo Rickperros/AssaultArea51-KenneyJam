@@ -7,6 +7,8 @@ public class Alien : MonoBehaviour
 
     public AlienManager manager;
 
+    public ParticleSystem AbductionParticles;
+    public ParticleSystem ExplosionParticles;
     public CarOscillation Car;
     public int HP = 100;
     public float MoveSpeed;
@@ -31,6 +33,24 @@ public class Alien : MonoBehaviour
 
     private void ChangeState (STATES newState)
     {
+        switch (currentState)
+        {
+            case STATES.TOCAR:
+                break;
+            case STATES.ONCAR:
+                break;
+            case STATES.ABDUCING:
+                var abustionEmission = AbductionParticles.emission;
+                abustionEmission.enabled = false;
+                break;
+            case STATES.LEAVING:
+                break;
+            case STATES.EXPLODING:
+                break;
+            case STATES.DYING:
+                break;
+        }
+
         switch (newState)
         {
             case STATES.TOCAR:
@@ -48,8 +68,12 @@ public class Alien : MonoBehaviour
                 Car.Restart();
                 break;
             case STATES.ABDUCING:
+                var abustionEmission = AbductionParticles.emission;
+                abustionEmission.enabled = true;
                 break;
             case STATES.EXPLODING:
+                var explosionEmission = ExplosionParticles.emission;
+                explosionEmission.enabled = true;
                 animator.Play("Alien Dying");
                 onExplodingTimer = 0;
                 break;

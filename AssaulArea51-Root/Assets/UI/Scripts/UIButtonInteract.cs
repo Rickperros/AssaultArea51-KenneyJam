@@ -19,23 +19,26 @@ public class UIButtonInteract : MonoBehaviour
     [SerializeField] private Text TxtOutput;
     [SerializeField] private Text TxtInstruction;
     [SerializeField] private Image ImgHoldProgress;
-    public SpriteRenderer AnchorSprite;
-
+    public Transform AnchorTransform;
+    private float smoothTime = 0.05F;
 
     private Vector3 AnchorPosition;
+    private Vector3 velocity = Vector3.zero;
+
 
     private float timer;
     private bool onHolding;
 
+    private void Start()
+    {
+        AnchorTransform = GameManager.Instance()._player;
+        Exit();
+    }
+
     private void Update()
     {
-        if (AnchorSprite == null)
-            return;
-
-        AnchorPosition = AnchorSprite.transform.position + Vector3.down * AnchorSprite.bounds.max.y;
-        transform.position = Camera.main.WorldToScreenPoint(AnchorPosition);
-
-        if (!onHolding)
+        AnchorPosition = AnchorTransform.transform.position;
+        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition) + Vector3.up * 50, ref velocity, smoothTime);
 
         timer += Time.deltaTime / 2;
         if (timer > 1)
@@ -98,7 +101,7 @@ public class UIButtonInteract : MonoBehaviour
     /// Changes the fillable bar of the action
     /// </summary>
     /// <param name="value">value from 0 to 1</param>
-    public void Progress (float value)
+    private void Progress (float value)
     {
         ImgHoldProgress.fillAmount = value / 1;
     }

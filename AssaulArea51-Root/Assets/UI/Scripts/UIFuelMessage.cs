@@ -12,13 +12,13 @@ public class UIFuelMessage : MonoBehaviour
 
     private Vector3 AnchorPosition;
 
-    public float smoothTime = 0.3F;
+    private float smoothTime = 0.05F;
     private Vector3 velocity = Vector3.zero;
 
     private void Update()
     {
-        AnchorPosition = AnchorSprite.transform.position + Vector3.down *2 * AnchorSprite.bounds.max.y;
-        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition), ref velocity, smoothTime);
+        AnchorPosition = AnchorSprite.transform.position;
+        transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition) + Vector3.up * 150, ref velocity, smoothTime);
     }
 
     public void FuelLow ()

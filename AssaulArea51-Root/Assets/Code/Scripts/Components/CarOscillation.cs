@@ -34,6 +34,11 @@ public class CarOscillation : MonoBehaviour
         _startY = transform.position.y;
     }
 
+    void OnBecameInvisible()
+    {
+        GameManager.Instance().RemoveCar();
+    }
+
     void Update()
     {
         if (_onStop)
