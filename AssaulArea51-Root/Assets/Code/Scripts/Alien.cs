@@ -5,6 +5,8 @@ using UnityEngine;
 public class Alien : MonoBehaviour
 {
 
+    public AlienManager manager;
+
     public CarOscillation Car;
     public int HP = 100;
     public float MoveSpeed;
@@ -42,6 +44,7 @@ public class Alien : MonoBehaviour
                 HP = 99999;
                 break;
             case STATES.DYING:
+                manager.AlienOnScene = false;
                 Car.Restart();
                 break;
             case STATES.ABDUCING:
@@ -99,6 +102,11 @@ public class Alien : MonoBehaviour
                     ChangeState(STATES.ABDUCING);
                 break;
             case STATES.LEAVING:
+                if (transform.position == spawnPosition)
+                {
+                    manager.AlienOnScene = false;
+                    gameObject.SetActive(false);
+                }
                 break;
             case STATES.DYING:
                 break;
