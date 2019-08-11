@@ -27,9 +27,6 @@ public class UICarFuel : MonoBehaviour
 
     private void Update()
     {
-        if (anchorTransform == null)
-            return;
-
         AnchorPosition = anchorTransform.transform.position;
         transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition), ref velocity, smoothTime);
     }
@@ -44,6 +41,12 @@ public class UICarFuel : MonoBehaviour
     {
         ArrowsUp.gameObject.SetActive(false);
         ArrowsDown.gameObject.SetActive(true);
+    }
+
+    public void Stop()
+    {
+        ArrowsUp.gameObject.SetActive(false);
+        ArrowsDown.gameObject.SetActive(false);
     }
 
     /// <summary>

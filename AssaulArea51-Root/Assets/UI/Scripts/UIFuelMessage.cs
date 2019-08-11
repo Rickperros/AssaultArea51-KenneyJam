@@ -17,7 +17,7 @@ public class UIFuelMessage : MonoBehaviour
 
     private void Update()
     {
-        AnchorPosition = AnchorSprite.transform.position + Vector3.down *2 * AnchorSprite.bounds.max.y;
+        AnchorPosition = AnchorSprite.transform.position + Vector3.down * 2 * AnchorSprite.bounds.max.y;
         transform.position = Vector3.SmoothDamp(transform.position, Camera.main.WorldToScreenPoint(AnchorPosition), ref velocity, smoothTime);
     }
 
