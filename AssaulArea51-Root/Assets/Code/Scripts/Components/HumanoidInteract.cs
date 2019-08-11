@@ -57,7 +57,10 @@ public class HumanoidInteract : MonoBehaviour
                 _carFuelTank = null;
             }
             if (_isInDispenser)
+            {
                 _isInDispenser = false;
+                _fuelTank.HidePlayerTank();
+            }
         }
     }
 }

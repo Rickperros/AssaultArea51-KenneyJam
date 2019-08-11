@@ -20,7 +20,7 @@ public class FuelTankComponent : HoldableHotspot
 
     private float _currentFuel = 0f;
     private UIFuelMessage _UIFuelMessage;
-    private UICanister _UICanister;
+    private UICarFuel _UICarFuel;
     private UIButtonInteract _UIButtonInteract;
     private bool _reposting = false;
     private bool _interacting = false;
@@ -38,8 +38,8 @@ public class FuelTankComponent : HoldableHotspot
         _UIButtonInteract = GameObject.Instantiate(_InteractUI, _gameHUDCanvas.transform).GetComponent<UIButtonInteract>();
         _UIButtonInteract.gameObject.SetActive(false);
 
-        _UICanister = GameObject.Instantiate(_fuelTankUI, _gameHUDCanvas.transform).GetComponent<UICanister>();
-        _UICanister.gameObject.SetActive(false);
+        _UICarFuel = GameObject.Instantiate(_fuelTankUI, _gameHUDCanvas.transform).GetComponent<UICarFuel>();
+        _UICarFuel.gameObject.SetActive(false);
 
         _UIFuelMessage = GameObject.Instantiate(_lowFuelDisclaimer, _gameHUDCanvas.transform).GetComponent<UIFuelMessage>();
         _UIFuelMessage.AnchorSprite = l_renderer;
@@ -56,7 +56,7 @@ public class FuelTankComponent : HoldableHotspot
             _movementController.LeaveScreen();
             _UIFuelMessage.gameObject.SetActive(true);
             _UIButtonInteract.gameObject.SetActive(false);
-            _UICanister.gameObject.SetActive(false);
+            _UICarFuel.gameObject.SetActive(false);
             _UIFuelMessage.OutOfFuel();
             _trigger.enabled = false;
         }
@@ -65,7 +65,7 @@ public class FuelTankComponent : HoldableHotspot
             _movementController.HoldOnBackGoal();
             _UIFuelMessage.gameObject.SetActive(true);
             _UIButtonInteract.gameObject.SetActive(false);
-            _UICanister.gameObject.SetActive(false);
+            _UICarFuel.gameObject.SetActive(false);
             _UIFuelMessage.FuelLow();
             _trigger.enabled = true;
         }
@@ -78,11 +78,10 @@ public class FuelTankComponent : HoldableHotspot
 
     public override bool ReadInput()
     {
-        _UIFuelMessage.gameObject.SetActive(false);
         _UIButtonInteract.gameObject.SetActive(true);
-        _UIButtonInteract.Progress(0f);
-        _UICanister.gameObject.SetActive(true);
-        _UICanister.Progress(_currentFuel / _maxFuel);
+        _UIFuelMessage.gameObject.SetActive(false);
+        _UICarFuel.gameObject.SetActive(true);
+        _UICarFuel.Progress(_currentFuel / _maxFuel);
         _requiredTimeRatio = _currentFuel / _maxFuel;
         _currentRequiredInputTime = _requiredTimeRatio * _maxTimeToRefill;
         bool l_readValue = base.ReadInput();
@@ -95,16 +94,15 @@ public class FuelTankComponent : HoldableHotspot
 
     public override void StartInteraction()
     {
-        
+        _UIButtonInteract.Act();
     }
 
     public override void Interact()
     {
         base.Interact();
         _interacting = true;
-        _UIButtonInteract.Progress(_currentInteractionTime / _currentRequiredInputTime);
         _currentFuel += _maxFuelIncrease * Time.deltaTime;
-        _UICanister.Progress(_currentFuel / _maxFuel);
+        _UICarFuel.Progress(_currentFuel / _maxFuel);
         if(_currentFuel >= _maxFuel)
         {
             _currentFuel = _maxFuel;
@@ -115,11 +113,32 @@ public class FuelTankComponent : HoldableHotspot
 
     public override void EndInteraction()
     {
+        _UIButtonInteract.Release();
         _movementController.SwitchGoals();
         _UIFuelMessage.gameObject.SetActive(false);
         _UIButtonInteract.gameObject.SetActive(false);
-        _UICanister.gameObject.SetActive(false);
+        _UICarFuel.gameObject.SetActive(false);
         _trigger.enabled = false;
         _interacting = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            _UIFuelMessage.gameObject.SetActive(false);
+            _UIButtonInteract.Enter();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            _UIButtonInteract.Exit();
+            _UICarFuel.gameObject.SetActive(false);
+            _UIButtonInteract.gameObject.SetActive(false);
+
+        }
     }
 }

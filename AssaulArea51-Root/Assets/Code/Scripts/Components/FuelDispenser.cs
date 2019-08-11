@@ -22,4 +22,37 @@ public class FuelDispenser : HoldableHotspot
         _UIButtonInteract.gameObject.SetActive(true);
         return base.ReadInput();
     }
+
+    public override void StartInteraction()
+    {
+        base.StartInteraction();
+
+        _UIButtonInteract.Act();
+    }
+
+    public override void EndInteraction()
+    {
+        base.EndInteraction();
+        Debug.Log("Dispenser out");
+        _UIButtonInteract.Release();
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            _UIButtonInteract.Enter();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            _UIButtonInteract.Exit();
+            _UIButtonInteract.gameObject.SetActive(false);
+        }
+    }
+       
 }
