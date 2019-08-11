@@ -90,7 +90,7 @@ public class Alien : MonoBehaviour
         switch (currentState)
         {
             case STATES.TOCAR:
-                transform.position = Vector3.MoveTowards(transform.position, new Vector3(Car.transform.position.x, Car.transform.position.y + 8, 0), MoveSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(Car.transform.position.x, Car.transform.position.y + 5, 0), MoveSpeed * Time.deltaTime);
                 break;
             case STATES.ONCAR:
                 onCarTimer += Time.deltaTime;
