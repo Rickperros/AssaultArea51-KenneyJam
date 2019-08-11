@@ -232,6 +232,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6012384830708774754, guid: e89d4caaca81f5546a074fab856cced0,
+        type: 3}
+      propertyPath: Car
+      value: 
+      objectReference: {fileID: 582378721}
     - target: {fileID: 6012384830708774755, guid: e89d4caaca81f5546a074fab856cced0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -287,11 +292,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6012384830708774754, guid: e89d4caaca81f5546a074fab856cced0,
-        type: 3}
-      propertyPath: Car
-      value: 
-      objectReference: {fileID: 582378721}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89d4caaca81f5546a074fab856cced0, type: 3}
 --- !u!4 &154786561 stripped
@@ -680,6 +680,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -6.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6700835961191005332, guid: 33b894616fa3bb14b9dfb8b1c93a7dd4,
+        type: 3}
+      propertyPath: _gameHUDCanvas
+      value: 
+      objectReference: {fileID: 888848501}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33b894616fa3bb14b9dfb8b1c93a7dd4, type: 3}
 --- !u!1 &882603004
@@ -1285,6 +1290,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74b521ae18b854f42a278922fabbbeff, type: 3}
+--- !u!1 &1343211548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 102338407}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1343211549}
+  m_Layer: 0
+  m_Name: Holder Alien (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1343211549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 102338407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343211548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415844894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,7 +2084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1439573325}
   _levelProgressBar: {fileID: 0}
-  _gameHUD: {fileID: 0}
+  _gameHUD: {fileID: 888848501}
   _minCarsToSucces: 3
   _carsInLevel: 0
   _levelDuration: 300
@@ -2386,6 +2421,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "cami\xF3n"
       objectReference: {fileID: 0}
+    - target: {fileID: 5960333692526463562, guid: 7276338579da9174898e572e9bcf2460,
+        type: 3}
+      propertyPath: _leaveScreenGoal
+      value: 
+      objectReference: {fileID: 1659308350}
     - target: {fileID: 5960333694282741590, guid: 7276338579da9174898e572e9bcf2460,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2441,11 +2481,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5960333692526463562, guid: 7276338579da9174898e572e9bcf2460,
-        type: 3}
-      propertyPath: _leaveScreenGoal
-      value: 
-      objectReference: {fileID: 1659308350}
     - target: {fileID: 5960333692526463560, guid: 7276338579da9174898e572e9bcf2460,
         type: 3}
       propertyPath: _gameHUDCanvas
