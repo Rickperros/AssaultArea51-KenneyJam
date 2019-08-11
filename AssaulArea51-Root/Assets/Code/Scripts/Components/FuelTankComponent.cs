@@ -8,7 +8,7 @@ public class FuelTankComponent : HoldableHotspot
     [SerializeField] private float _fuelConsumePerSecond;
     [Header("Balancing")]
     [SerializeField] [Range(0f,1f)] private float _lowFuelThreshold = 0.33f;
-    [SerializeField] private float _maxFuelIncrease;
+    public float _maxFuelIncrease;
     [Header("References")]
     [SerializeField] private CarOscillation _movementController;
     [SerializeField] private Canvas _gameHUDCanvas;
