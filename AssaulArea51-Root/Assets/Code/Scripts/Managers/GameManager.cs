@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public EGameState _currentGameState = EGameState.GAME_OVER;
     private float _currentplayedTime = 0f;
 
+    private GameMenu _menu;
+
     private void Awake()
     {
        
@@ -39,6 +41,8 @@ public class GameManager : MonoBehaviour
         _UIProgressBar.Progress(0);
 
         ChangeGameState(EGameState.PLAYING);
+
+        _menu = FindObjectOfType<GameMenu>();
     }
 
     void Update()
@@ -46,10 +50,10 @@ public class GameManager : MonoBehaviour
         if(_isPlaying)
         {
             if (_carsInLevel < _minCarsToSucces)
-                Debug.Log("FAILURE!");
-            _currentplayedTime += Time.deltaTime;
+                _menu.Loose();
+             _currentplayedTime += Time.deltaTime;
             if (_currentplayedTime > _levelDuration)
-                Debug.Log("Succes!");
+                _menu.Win();
 
             _UIProgressBar.Progress(_currentplayedTime/_levelDuration);
         }
@@ -72,6 +76,7 @@ public class GameManager : MonoBehaviour
         switch(_currentGameState)
         {
             case EGameState.PAUSED:
+                Time.timeScale = 1;
                 _isPaused = false;
                 break;
             case EGameState.PLAYING:
@@ -87,6 +92,7 @@ public class GameManager : MonoBehaviour
         switch (_currentGameState)
         {
             case EGameState.PAUSED:
+                Time.timeScale = 0;
                 _isPaused = true;
                 break;
             case EGameState.PLAYING:
